@@ -1,0 +1,186 @@
+@charset "utf-8";
+
+#cometcontainer {
+/*	height: 200px;*/
+/*	max-height: 200px;*/
+	padding-top: 0;
+	padding-bottom: 0;
+	background-image: url("../../Unnamed Site 2/BannerStars.png");
+	background-repeat: repeat-x;
+	background-size: contain;
+}
+
+#comet {
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+/*	width: auto;*/
+	max-width: 100%;
+	max-height: 200px;
+	hegiht: auto;
+/*	max-height: 100%;*/
+}
+
+#searchb {
+/*	color: #4B5EF8;*/
+	color: black;
+	border-color: black;
+}
+
+#searchb:hover{
+	color: white;
+	background-color: #4B5EF8;
+/*	color: black;*/
+	border-color: #4B5EF8;
+}
+
+.YTLink {
+	color: black;
+}
+
+.YTLink:hover {
+	color: gray;
+	text-decoration: none;
+	font-weight: bold;
+}
+
+.YTHeader {
+/*	background-color: #FF0000;*/
+	color: black;
+	font-weight: bold;
+	border-color: #FF0000;
+	border-bottom-width: medium;
+}
+
+.thebluebutton {
+	background-color: #fff;
+	color: black;
+	border-color: black;
+}
+
+.thebluebutton:hover {
+/*	background-color:#0F5290; */
+	color: white;
+	background-color: #4B5EF8;
+/*	color: black;*/
+	border-color: #4B5EF8;
+}
+
+.threecards {
+/*	max-height: 18em;*/
+/*	width: 100%;*/
+/*	object-fit: cover;*/
+}
+
+.threecards img{
+	max-height: 18em;
+	height: 18em;
+	object-fit: cover;
+/*	height: 100%;*/
+}
+
+/*
+#pptimage {
+	object-fit: contain;
+}*/
+
+ul {
+  margin: 0;
+}
+ul.dashed {
+  list-style-type: none;
+  padding-left: 1em;
+}
+ul.dashed > li {
+  text-indent: 0px;
+}
+ul.dashed > li:before {
+  content: "- ";
+  text-indent: -2px;
+}
+
+.social_square_icons ul {
+     margin: 0;
+     padding: 0;
+     list-style: none;
+/*     margin-left: 450px;*/
+/*     margin-top: 300px*/
+ }
+
+.social_square_icons li {
+	float: left;
+}
+
+ .social_square_icons ul li:first-child {
+     margin-left: 0px
+ }
+
+/*
+ .social_square_icons ul li a {
+     float: left;
+     line-height: 40px;
+     color: #e0e0e0;
+     height: 40px;
+     width: 40px;
+     text-align: center;
+     border: 1px solid #e0e0e0
+ }
+*/
+
+ .social_square_icons ul li a {
+     float: left;
+     line-height: 35px;
+     color: #e0e0e0;
+     height: 40px;
+     width: 40px;
+     text-align: center;
+/*     border: 1px solid #e0e0e0;*/
+/*	 padding: 10px;*/
+	 font-size: 30px;
+ }
+
+ .gap {
+     margin-right: 10px
+ }
+
+ .social_icons_rounded ul li a i {
+     font-size: 16px
+ }
+
+ .t_twitter:hover {
+     color: #fff;
+     background: #35bbec;
+     border: 1px solid #35bbec
+ }
+
+ .linkedin:hover {
+     color: #fff;
+     background: #007bb5;
+     border: 1px solid #007bb5
+ }
+
+ .youtube:hover {
+     color: #fff;
+     background: #ff0000;
+     border: 1px solid #ff0000
+ }
+
+#githubLogo {
+	padding: 0px;
+	height: 100%;
+	display: inline-block;
+}
+
+#githubLogo img{
+	height: 20px;
+	opacity: .7;
+/*	position: absolute;*/
+/*	top:50%;*/
+	margin-top: 11px;
+	margin-left: 5px;
+	margin-right: 5px;
+}
+
+#githubLogo img:hover{
+	opacity:1;
+}
