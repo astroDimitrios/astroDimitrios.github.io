@@ -270,3 +270,20 @@ ul.dashed > li:before {
 	text-decoration: none;
 	color: black;
 }
+
+.visualIMG {
+	margin-top: 10px;
+	vertical-align: middle;
+	width: 100%;
+}
+
+.visCont {
+	width: 100%;
+	max-width: 100%;
+	margin-left: 0;
+	margin-right: 0;
+}
+
+.visRow {
+	width: 100%;
+}

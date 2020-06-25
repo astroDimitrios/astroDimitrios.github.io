@@ -4,7 +4,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>astroDimitrios: Challenge</title>
+    <title>astroDimitrios: Visualisations</title>
 
     <!-- Bootstrap -->
     <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
@@ -37,7 +37,7 @@
                 <a class="nav-link" href="code.html">Code</a>
              </li>
 			 <li class="nav-item">
-                <a class="nav-link" href="#">Challenges</a>
+                <a class="nav-link" href="challenge.html">Challenges</a>
              </li>
              <li class="nav-item dropdown">
                 <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
@@ -50,7 +50,7 @@
                 </div>
              </li>
 			 <li class="nav-item">
-                <a class="nav-link" href="visual.html">Visuals</a>
+                <a class="nav-link" href="#">Visuals</a>
              </li>
              <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -73,34 +73,41 @@
 <!--		<img id="comet2" src="images/Banner2.png" alt="Comet">-->
     </div>
 	<div class="jumbotron jumbotron-fluid text-center">
-       <h1 class="display-4 innerjumbo">Challenge</h1>
+       <h1 class="display-4 innerjumbo">Visualisations</h1>
     </div>
-	<div class="container">
-       <div class="row text-center">
-          <div class="col-lg-6 offset-lg-3">
-			  <p>Be sure to check out each challenges 'short' on YouTube which explains the challenge and check back once the challenge is over for the tutorial.</p>
-	      </div>
-	   </div>
-		<br>
-	</div>
     <div class="container">
-       <div class="row">
+       <div class="row text-center">
 		   <div class="col-lg-10 offset-lg-1">
-			  <h4>June 2020</h4><br>
-		      <p><strong>Challenge:</strong> Calculate the time between when a planet is at its closest to the Earth and when a planet is at its furthest from the Earth.</p>
-			  <img alt="Earth Mars Distance" src="images/earthMarsOpt.gif" class="challengeImage"><br>
-			  <p>This gif shows the distance between the Earth and Mars over one orbit of Mars assuming they start at their closest approach. The maximum separation between the Earth and Mars is shown as 2.649 AU. How long will it take for the two planets to reach that maximum separation of 2.649 AU? You may use astropy's units module but no other astronomy related python package.</p>
-			  <br>
+		      <p>These visualisations were all created with the Matplotlib plotting library. The code used to create these images is freely available on my GitHub. If you can't find the code for an image email me and I can point you in the right direction. All images are free to use under the GPL-3.0 license and it would be great if you reference the images back to this website or my GitHub!</p>
+			   <br>
 		   </div>
        </div>
-	   <div class="row">
-		   <div class="col-lg-10 offset-lg-1">
-			   <h4>Archived</h4>
-			   <p>There are currently no archived challenges.</p>
+	 </div>
+	 <div class="container visCont">
+	   <div class="row visRow">
+		   <div class="col visCol">
+			   <img alt="atmospheric retention" src="images/atm_retention.png" class="visualIMG">
+			   <img alt="binding energy" src="images/bindingEnergyLog.gif" class="visualIMG">
+			   <img alt="ice giant interiors" src="images/ice_giant_interiors_compositional.png" class="visualIMG">
+			   <img alt="coulomb barrier" src="images/uranus_rings.png" class="visualIMG">
+			   <img alt="coulomb barrier" src="images/ppCoulombBarrier.png" class="visualIMG">
+		   </div>
+		   <div class="col visCol">
+			   <img alt="sunspots tracked" src="images/sunspotsTracked.gif" class="visualIMG">
+			   <img alt="blackbody curves" src="images/blackbodyCurves.png" class="visualIMG">
+			   <img alt="standard atmopshere" src="images/int_std_atm.png" class="visualIMG">
+			   <img alt="saturn rings" src="images/saturn_rings_roche.png" class="visualIMG">
+		   </div>
+		   <div class="col visCol">
+			   <img alt="density vs radius planets" src="images/density_vs_radius_planets.png" class="visualIMG">
+			   <img alt="geotherm" src="images/geotherm.png" class="visualIMG">
+			   <img alt="annotated moon" src="images/mymoonAnnotated.png" class="visualIMG">
+			   <img alt="sun SDO AIA images stacked" src="images/sunAIAstacked.png" class="visualIMG">
 		   </div>
 	   </div>
        <br/>
        <br/>
+	 </div>
 <!--
        <div class="row">
           <div class=" col-md-4"> Click here to select this<strong> column.</strong> Always place your content within a column. Columns are indicated by a dashed blue line. </div>
@@ -108,6 +115,7 @@
           <div class="col-md-4 "> You can <strong>offset a column</strong> using the handle on the left. Drag it to increase or reduce the offset. </div>
        </div>
 -->
+	<div class="container">
        <br>
        <hr>
        <div class="row">
