@@ -287,3 +287,31 @@ ul.dashed > li:before {
 .visRow {
 	width: 100%;
 }
+
+.YTfrontR {
+	max-width: 60px;
+	padding-right: 1em;
+}
+
+.YTfrontL {
+	max-width: 60px;
+	padding-left: 1em;
+}
+
+
+.YTp {
+	padding-top: .4em;
+	padding-bottom: .4em;
+	margin: 0px;
+}
+
+/*
+#YTtag {
+	padding-bottom: 30px;
+}
+*/
+
+#YTtagline {
+	font-size: 1.5em;
+	margin: 0px;
+}
