@@ -229,11 +229,6 @@ ul.dashed > li:before {
 	margin-right: auto;
 }
 
-#binderLogo {
-	max-height: 70px;
-	padding-bottom: 10px;
-}
-
 .inspiration {
 	margin-bottom: 4px;
 }
@@ -314,4 +309,44 @@ ul.dashed > li:before {
 #YTtagline {
 	font-size: 1.5em;
 	margin: 0px;
+}
+
+#mainlogo {
+	max-width: 350px;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 1em;
+}
+@media (min-width: 1200px) {
+	#mainlogo {
+		max-width: 350px;
+		float: right;
+		padding-right: 4em;
+		display: block;
+	}
+}
+
+#maintext {
+	display: none;
+}
+@media (min-width: 1200px) {
+	#maintext {
+		float: left;
+		padding-left: 4em;
+		padding-top: .6em;
+		font-size: 1.1em;
+		max-width: 60%;
+		display: block;
+	}
+}
+
+#maincont {
+	padding-bottom: 1em;
+	padding-top: 1em;
+}
+
+#navlogo {
+	height: 100%;
+	min-width: 2.5em;
 }

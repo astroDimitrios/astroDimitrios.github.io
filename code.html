@@ -14,7 +14,7 @@
   </head>
   <body>
     <nav class="navbar navbar-expand-lg navbar-light">
-       <a class="navbar-brand" href="index.html">astroDimitrios</a>
+       <a class="navbar-brand align-items-center align-self-center" href="#"><img id="navlogo" src="images/APLogoNAV.svg" alt="Astronomy and Python Logo"></a>
        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
        <span class="navbar-toggler-icon"></span>
        </button>
@@ -75,12 +75,12 @@
 <!--		<img id="comet2" src="images/Banner2.png" alt="Comet">-->
     </div>
 	<div class="jumbotron jumbotron-fluid text-center">
-       <h1 class="display-4 innerjumbo"><a href="https://mybinder.org/v2/gh/DimitriosAstro/Astronomy/master"><img alt="binder" src="images/binder.svg" id="binderLogo"></a>Code</h1>
+       <h1 class="display-4 innerjumbo">Code</h1>
     </div>
 	<div class="container">
        <div class="row text-center">
           <div class="col-lg-8 offset-lg-2">
-			  <p>This page has documentation for the coding activities you can find on my GitHub <a href="https://github.com/astroDimitrios/Astronomy/tree/master/Code" class="astroLinks">here</a>. You can launch the whole repository to check out the code by clicking on the Binder logo above.</p>
+			  <p>This page has documentation for the coding activities you can find on my GitHub <a href="https://github.com/astroDimitrios/Astronomy/tree/master/Code" class="astroLinks">here</a></p>
 	      </div>
 	   </div>
 		<br>
@@ -93,7 +93,13 @@
 		      <p>Each code has a teacher version with all outputs and completed code. These have the suffix Teacher. The student file is much smaller as it is missing the outputs and has code completition tasks for the students to complete.</p>
 			  <p>At the start of the code is the <strong>Aim</strong> of the activity along with a <strong>Predict</strong> section which encourages the students to think about the topic before starting the activity.</p>
 			  <p>The goal of the coding activities are to <strong>process</strong> and <strong>visualise</strong> data, and to <strong>extract physical insights</strong> from them (as described in the AAPT report below). However by performing the activities students will inevitably also learn debugging, how to convert theory/models into code, and how to present data formally in a document or presentation.</p>
-			  <p>The outputs (images, movies etc) were designed to be a starting point for my students to put their own data and visualisations in their reports and presentations. My hope is this will promote a deeper understanding of the topic and better engage the students, encouraging ownership and pride in their work.</p><br>
+			  <p>The outputs (images, movies etc) were designed to be a starting point for my students to put their own data and visualisations in their reports and presentations. My hope is this will promote a deeper understanding of the topic and better engage the students, encouraging ownership and pride in their work.</p>
+			   <br>
+			   <h4><a id="running-code">Running the Code</a></h4><br>
+			   <p><strong>NEW: </strong>You can now test some of the activities on our JupyterHub. Head over to <a href="https://hub.astropython.com/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FastroDimitrios%2FLaunch&urlpath=lab%2Ftree%2FLaunch%2FWelcome.ipynb&branch=main">hub.astropython.com</a> sign up with a username and password then login! The welcome document has links which pull the activities you want to try from my GitHub. If something doesn't work please let me know! The server is built for my students so it can only handle 20-30 people at a time. If you do test out some of the activities let me know what you think.</p>
+			   <p>Otherwise you can send individual notebooks (with the required files) to students and they can upload them to <a href="https://jupyter.org/try" class="astroLinks">jupyter.org/try</a>. If you have your own JupyterHub setup clone the repository and do as you will!</p>
+			   <p>Pair coding - some activities are more suited to pair coding such as AstPy-1 and AstPy-2.</p>
+			   <br>
 			  <h5>Inspiration from:</h5><br>
 			  <p class="inspiration">Adam LaMee, Scientific Computing Resources, Url: <a href="https://adamlamee.github.io/CODINGinK12/" class="astroLinks">adamlamee.github.io/CODINGinK12/</a></p>
 			  <p class="inspiration">Brown & Wilson, Ten quick tips for teaching programming, PlosCompBiol, Url: <a href="https://doi.org/10.1371/journal.pcbi.1006023" class="astroLinks">doi.org/10.1371/journal.pcbi.1006023</a></p>
@@ -103,15 +109,6 @@
 			  <br>
 		   </div>
        </div>
-	   <div class="row">
-		   <div class="col-lg-10 offset-lg-1">
-			   <h4>Running the Code</h4><br>
-			   <p>You can run the code using my Binder build! Click on the three rings next to Code at the top of the page.</p>
-			   <p>Otherwise you can send individual notebooks (with the required files) to students and they can upload them to <a href="https://jupyter.org/try" class="astroLinks">jupyter.org/try</a>. If you have your own JupyterHub setup clone the repository and do as you will!</p>
-			   <p>Pair coding - some activities are more suited to pair coding such as AstPy-1 and AstPy-2.</p>
-			   <p><strong>NOTES:</strong> If I forget to rebuild the Binder image after a push to the repository it will take a while to rebuild (5-10 mins). The .py files have not been tested in an interactive environment and are not updated even if the Notebook code is.</p><br>
-		   </div>
-	   </div>
 	   <div class="row">
 		   <div class="col-lg-10 offset-lg-1">
 			   <h4>Inside the activity directory</h4><br>
