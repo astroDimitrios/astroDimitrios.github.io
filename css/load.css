@@ -1,0 +1,21 @@
+@charset "utf-8";
+/* CSS Document */
+
+#overlay {
+    display:flex;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    background: white;
+    transition: 1s 0.4s;
+	align-items: center;
+	justify-content: center;
+}
+
+#loading-logo {
+	opacity: 0;
+	height: min(15vw, 500px);
+}

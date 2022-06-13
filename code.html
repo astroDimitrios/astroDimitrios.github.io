@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astronomy & Python: Code</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="favicon.png">
+  </head>
+  <body>
+    <div class="nav-social-wrapper">
+    <nav class="navbar navbar-expand-md navbar-light astro-navbar">
+       <div id="navlogo-div"><a class="navbar-brand align-items-center align-self-center" href="index.html"><img id="navlogo" src="images/APLogoNAV.svg" alt="Astronomy and Python Logo"></a></div>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item">
+                <a class="nav-link navlink" href="index.html">Home <span class="sr-only">(current)</span></a>
+             </li>
+			  <li class="nav-item">
+                <a class="nav-link navlink" href="about.html">About</a>
+             </li>
+			  <li class="nav-item dropdown">
+                <a class="nav-link navlink dropdown-toggle navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Get Involved
+                </a>
+                <div class="dropdown-menu astro-drop" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="projects.html">Students</a>
+				   <a class="dropdown-item" href="educators.html">Educators</a>
+				   <a class="dropdown-item" href="challenge.html">Challenges</a>
+                </div>
+             </li>
+			 <li class="nav-item astro-nav-item active">
+                <a class="nav-link navlink" href="code.html">Code</a>
+             </li>
+             <li class="nav-item astro-nav-item">
+                <a class="nav-link navlink" href="https://github.com/AstroDimitrios/Astronomy">
+					GitHub <img id="githubLogo" alt="GitHub Logo" src="images/github.svg">
+				</a>
+             </li>
+             <li class="nav-item dropdown astro-nav-item">
+                <a class="nav-link navlink dropdown-toggle navbarDropdown" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+                </a>
+                <div class="dropdown-menu astro-drop" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="ppt.html">Teaching</a>
+				   <a class="dropdown-item" href="data.html">Data</a>
+					<a class="dropdown-item" href="fits.html">FITs Processing</a>
+					<a class="dropdown-item" href="read.html">Reading Lists</a>
+					<a class="dropdown-item" href="edi.html">EDI & Careers</a>
+				   <a class="dropdown-item" href="visual.html">Visuals</a>
+                </div>
+             </li>
+          </ul>
+       </div>
+	  </nav>
+	  <div class="social_square_icons">
+    	     <ul>
+				<li id="ytube-list"><a href="https://www.youtube.com/channel/UCf8Sg-cgLNubyCM5Em8eDZg" class="youtube gap"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+				<li><a href="https://twitter.com/AstroDimitrios" class="t_twitter gap"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+				<li><a href="https://www.linkedin.com/in/dimitrios-theodorakis-62b378171/" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+		     </ul>
+		  </div>
+	  </div>
+	<div class="jumbotron jumbotron-fluid text-center subpage-title">
+       <h1 class="display-4 innerjumbo">Code</h1>
+    </div>
+	<div class="container">
+       <div class="row text-center">
+          <div class="col-md-8 offset-md-2">
+			  <p>This page has documentation for the coding activities you can find on my GitHub <a href="https://github.com/astroDimitrios/Astronomy/tree/master/" class="astroLinks">here</a>. More detailed info for each activity can be found in the individual activity README files on GitHub.</p>
+	      </div>
+	   </div>
+		<br>
+	</div>
+    <div class="container">
+       <div class="row">
+		   <div class="col-md-10 offset-md-1">
+			  <h4>Coding Activities</h4><br>
+			  <p>My GitHub repository <a href="https://github.com/astroDimitrios/Astronomy/tree/master/" class="astroLinksreverse"><strong>Astronomy</strong></a> has python activities on various topics in astronomy. They are in the form of interactive Jupyter notebooks which can be accessed and run online. They are intended to take 1-2 hours.</p>
+		      <p>Each code has a teacher version with all outputs and completed code. These have the suffix Teacher. The student file is much smaller as it is missing the outputs and has code completition tasks for the students to complete.</p>
+			  <p>At the start of the code is the <strong>Aim</strong> of the activity along with a <strong>Predict</strong> section which encourages the students to think about the topic before starting the activity.</p>
+			  <p>The goal of the coding activities are to <strong>process</strong> and <strong>visualise</strong> data, and to <strong>extract physical insights</strong> from them (as described in the AAPT report below). However by performing the activities students will inevitably also learn debugging, how to convert theory/models into code, and how to present data formally in a document or presentation.</p>
+			  <p>The outputs (images, movies etc) were designed to be a starting point for my students to put their own data and visualisations in their reports and presentations. My hope is this will promote a deeper understanding of the topic and better engage the students, encouraging ownership and pride in their work.</p>
+			   <br>
+			   <h4><a id="running-code">Running the Code</a></h4><br>
+			   <p><strong>Try the Code: </strong>You can now test some of the activities on our JupyterHub. If you would like to do this please email me! Since Oct 2021 the server is no longer running continuously to reduce running costs. I will set it up for 48 hrs if you would like to test some activities.</p><p>When the server is running sign up <a href="https://hub.astropython.com/hub/signup">here</a> with a username and password then head over to <a href="https://hub.astropython.com/hub/user-redirect/git-pull?repo=https%3A%2F%2Fgithub.com%2FastroDimitrios%2FLaunch&urlpath=lab%2Ftree%2FLaunch%2FWelcome.ipynb&branch=main">hub.astropython.com</a> and log in! (It's important to use the second link after signing up so you get sent to the Welcome document) The welcome document has links which pull the activities you want to try from my GitHub. If something doesn't work please let me know! The server is built for my students so it can only handle 20-30 people at a time. If you do test out some of the activities let me know what you think.</p>
+			   <p><strong>NOTE: </strong>Since the server is not running continuously, if you want to keep your work please download it to your local computer, do NOT assume it is safe forever on the hub.</p>
+			   <p>Otherwise you can send individual notebooks (with the required files) to students and they can upload them to <a href="https://jupyter.org/try" class="astroLinks">jupyter.org/try</a>. If you have your own JupyterHub setup clone the repository and do as you will!</p>
+			   <p>You can also use <a href="https://colab.research.google.com" class="astroLinks">Google Colab</a> which is free to use!</p>
+			   <br>
+			   <h4><a id="adapting-code">Adapting the Activities</a></h4><br>
+			   <p>You can adapt and use the activities how you like! Just remember to reference the original activity on GitHub.</p>
+			   <p>You can make activities easier by:</p>
+			   <ul>
+  			      <li>Filling in more blanks for the students. Add more hints.</li>
+				   <li>Doing a walkthrough with students or record you completing it if they're stuck.</li>
+				   <li>Group students up to pair code activities or check each others work.</li>
+				   <li>Fill in all the blanks. Have students simply run the code and answer text questions based on what they are doing!</li>
+               </ul><br>
+			   <p>You can make activites harder by:</p>
+			   <ul>
+			     <li>Removing code and hints so there is more to complete.</li>	
+				  <li>Altering the instructions so the students have to do more independent research.</li>
+				   <li>Use the challenges at the end of the activities as assessments.</li>
+			   </ul>
+			   <br>
+			   <p>Make activities easier for younger students and harder for older ones. Or maybe change the focus of an activity from code completion to data analysis with the figures the code creates, or perhaps a bug hunting exercise. The activities can be adapted endlessly.</p>
+			   <p>This <a href="https://jupyter4edu.github.io/jupyter-edu-book/" class="astroLinks">Jupyter Book</a> has a treasure trove of tools and ideas for using notebooks in the classroom.</p><br>
+			  <h5>Inspiration from:</h5><br>
+			  <p class="inspiration">Adam LaMee, Scientific Computing Resources, Url: <a href="https://adamlamee.github.io/CODINGinK12/" class="astroLinks">adamlamee.github.io/CODINGinK12/</a></p>
+			  <p class="inspiration">Thomas Albin, Space Science with Python series, Url: <a href="https://twitter.com/MrAstroThomas" class="astroLinks">https://twitter.com/MrAstroThomas</a></p>
+			  <p class="inspiration">Peter Smith, Python Tutorials, Url: <a href="https://petercbsmith.github.io/" class="astroLinks">https://petercbsmith.github.io/</a></p>
+			  <p class="inspiration">Brown & Wilson, Ten quick tips for teaching programming, PlosCompBiol, Url: <a href="https://doi.org/10.1371/journal.pcbi.1006023" class="astroLinks">doi.org/10.1371/journal.pcbi.1006023</a></p>
+			  <p class="inspiration">American Association of Physics Teachers (AAPT), Computational Physics Report, Url: <a href="https://www.aapt.org/Resources/upload/AAPT_UCTF_CompPhysReport_final_B.pdf" class="astroLinks">aapt.org/Resources/upload/AAPT_UCTF_CompPhysReport_final_B.pdf</a></p>
+			  <p class="inspiration">PICUP, Integrating computing into physics, Url: <a href="https://www.compadre.org/PICUP/webdocs/About.cfm" class="astroLinks">compadre.org/PICUP/webdocs/About.cfm</a></p>
+			  <p>astronomycenter Resources, Url: <a href="https://www.compadre.org/astronomy/index.cfm" class="astroLinks">compadre.org/astronomy/index.cfm</a></p>
+			  <br>
+		   </div>
+       </div>
+	   <div class="row">
+		   <div class="col-md-10 offset-md-1">
+			   <h4>Data Files</h4><br>
+			   <p>There is a Data directory alongside the activity directories which contains all the data files for all activities. For descriptions of all the data files available go to Resources in the navigation bar then Data.</p><br>
+		   </div>
+	   </div>
+	  </div>
+	  <div class="container-fluid" id="activities-cont">
+	   <div class="row">
+		   <div class="col-md-8 offset-md-2">
+			   <h1 class="special-center-text">Activities List</h1>
+			   <p class="special-center-text">These are just brief summaries of each activity. Visit the activity directory on GitHub for the aim and prediction questions, all the inputs/data, and output images/files.</p><br>
+			   <p style="padding-left: 1em">Click on one of the contents links below to jump to the activity.</p>
+			   <div class="row">
+			   <div class="col-md-6" style="padding-left: 2em">
+					<div class="toc_container">
+	<!--				<p class="toc_title">Contents</p>-->
+					<ul class="toc_list">
+					<li><a href="#Activity_Header_1">AstPy-001 Intro Activities</a></li>
+					<li><a href="#Activity_Header_2">AstPy-002 Intermediate Intro Activities</a></li>
+					<li><a href="#Activity_Header_3">AstPy-003 Stellar Fusion</a></li>
+					<li><a href="#Activity_Header_4">AstPy-004 Solar Images</a></li>
+					<li><a href="#Activity_Header_5">AstPy-005 Solar Radiation</a></li>
+					<li><a href="#Activity_Header_6">AstPy-006 Sunspots</a></li>
+					<li><a href="#Activity_Header_7">AstPy-007 Lunar Surface</a></li>
+					<li><a href="#Activity_Header_8">AstPy-008 Planets</a></li>
+					<li><a href="#Activity_Header_9">AstPy-009 Planetary Interiors</a></li>
+					<li><a href="#Activity_Header_10">AstPy-010 Planetary Atmospheres</a></li>
+					<li><a href="#Activity_Header_11">AstPy-011 Earth's Heat</a></li>
+					<li><a href="#Activity_Header_12">AstPy-012 Earth's Atmosphere</a></li>
+					<li><a href="#Activity_Header_14">AstPy-014 Planetary Rings</a></li>
+					<li><a href="#Activity_Header_15">AstPy-015 Ring Dynamics</a></li>
+					</ul><br>
+					</div>
+			    </div>
+			   <div class="col-md-6" style="padding-left: 2em">
+					<div class="toc_container">
+	<!--				<p class="toc_title">Contents</p>-->
+					<ul class="toc_list">
+					<li><a href="#Activity_Header_S1">S001 - Mars 2020 Launch Windows</a></li>
+					<li><a href="#Activity_Header_S2">S002 - Team Seas</a></li>
+					</ul><br>
+					</div>
+			    </div>
+			   </div>
+		   </div>
+	   </div>
+	  </div><br><br>
+	  <div class="container">
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_1">
+			   <h4>AstPy-001 Intro Activities<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-001%20Intro%20Activities"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>A series of 10 intro activities (4 of which are live) to introduce students to Python, NumPy, Pandas, Matplotlib and other useful modules.</p>
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_2">
+			   <h4>AstPy-002 Intermediate Intro Activities<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-002%20Intermediate%20Intro%20Activities"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>COMING SOON - A series of 10 activities to introduce students to intermediate topics in Python.</p>
+			   <img alt="bouncing balls" src="images/bouncingBalls.gif" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_3">
+			   <h4>AstPy-003 Stellar Fusion<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-003%20Stellar%20Fusion"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Introduces the atomic mass unit. Students calculate nuclear binding energies, mass defects, and mass excesses. Contains nuclear data (masses and binding energies) from the Atomic Mass Data Center.</p>
+			   <img alt="binding energy" src="images/bindingEnergyLog.gif" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_4">
+			   <h4>AstPy-004 Solar Images<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-004%20Solar%20Images"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students use the SunPy module to explore the sun in different wavelengths and can download an image of the sun taken on today's date. Both SDO and SOHO images are explored as well as the sunspot cycle and flares. Some SDO HMI and AIA FITS files are provided.</p>
+			   <img alt="sun AIA images" src="images/sunAIAstacked.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_5">
+			   <h4>AstPy-005 Solar Radiation<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-005%20Solar%20Radiation"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students are introduced to the blackbody curve, Wien's law, and the effective temperature of planets.</p>
+			   <img alt="blackbody dists" src="images/blackbodyCurves.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div> 
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_6">
+			   <h4>AstPy-006 Sunspots<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-006%20Sunspots"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students track sunspots across the face of the sun and use that information to calculate the sidereal and synodic rotation rate of the sun. There is also code here that attempts to automatically detect and track sunspots.</p>
+			   <img alt="sunspots" src="images/sunspotsTracked.gif" class="activityIMG">
+			   <br>
+		   </div>
+	   </div> 
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_7">
+			   <h4>AstPy-007 Lunar Surface<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-007%20Lunar%20Surface"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students upload an image of the moon they took and then annotate it. From the image they calculate sizes and depths of craters using the SkyField package. Requires students to calcualte the resolution of their telescope (or camera). They can then compare their image to known data and the included Lunar Reconnaissance Orbiter (LRO) and Lunar Orbiter Laser Altimeter (LOLA) data.</p>
+			   <img alt="annotated moon" src="images/mymoonAnnotated.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div> 
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_8">
+			   <h4>AstPy-008 Planets<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-008%20Planets"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students compare data from the NASA planetary factsheet such as mass and radius and try and identify trends/groupings. The end of the assignment introduces students to exoplanet detection and observational biases.</p>
+			   <img alt="density vs radius for planets" src="images/density_vs_radius_planets.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_9">
+			   <h4>AstPy-009 Planetary Interiors<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-009%20Planetary%20Interiors"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students compare data on the interior compositions of the planets. They learn about compositional and mechanical layers and visualise the chemical composition of the Earth's crust.</p>
+			   <img alt="planetary interiors" src="images/ice_giant_interiors_compositional.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div> 
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_10">
+			   <h4>AstPy-010 Planetary Atmospheres<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-010%20Planetary%20Atmospheres"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students compare data on the chemical composition of planetary atmospheres. They can also calculate the escape velocity of some gases and work out whether those gases can escape from the planets atmosphere.</p>
+			   <img alt="atmospheric retention" src="images/atm_retention.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_11">
+			   <h4>AstPy-011 Earth's Heat<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-011%20Earths%20Heat"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students model the geothermal gradient of the lithospehre and then plot the geotherm for the whole Earth. Students also calculate the energy transfer via conduction and latent heat.</p>
+			   <img alt="Earth's geotherm" src="images/geotherm.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_12">
+			   <h4>AstPy-012 Earth's Atmosphere<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-012%20Earths%20Atmosphere"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students visualise how the temperature, pressure, density, and speed of sound vary with geopotential altitude using the International Standard Atmosphere model. Temperatures are constructed from data but all other properties are calculated using the ideal gas law etc.</p>
+			   <img alt="atmospheric retention" src="images/int_std_atm.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_14">
+			   <h4>AstPy-014 Planetary Rings<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-014%20Planetary%20Rings"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students visualise the rings of Saturn and then the other gas giants using data from the Ring-Moon Systems Node of the Planetary Data System. They plot the inner satellites on their figures along with their Roche limits (rigid and fluid) to see which moons are about to break up! </p>
+			   <img alt="saturn's rings" src="images/saturn_rings_roche.png" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_15">
+			   <h4>AstPy-015 Ring Dynamics<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/AstPy-015%20Ring%20Dynamics"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Students visualise the Roche limit using the N-body simulation package rebound. They calculate the location of resonances between moons and between moons and ring particles. Then they identify ring features associated with these resonances. Finally they look briefly at shepherd moons.</p>
+			   <img alt="shepherd moon sim" src="images/shepherd.gif" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	  <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_S1">
+			   <h4>S001 Mars 2020 Launch Windows<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/S001%20-%20Mars%202020%20Launch%20Windows"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>To celebrate the landing of the Mars 2020 rover Perseverance students use basic algebra to calculate when the launch windows are for a Hohmann transfer orbit to Mars.</p>
+			   <img alt="Hohmann orbit gif" src="images/s001.gif" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1" id="Activity_Header_S2">
+			   <h4>S002 Team Seas - River Pollution<a class="githubLogo-activities" href="https://github.com/astroDimitrios/Astronomy/tree/main/S002%20-%20Team%20Seas"><img class="githubLogo-activities-p" alt="GitHubLogo" src="images/github.svg"><img class="githubLogo-activities-s" alt="View on GitHub" src="images/githubView.svg">
+				</a></h4><br>
+			   <p>Analyse plastic discharge by global and local rivers using data from the Ocean Cleanup Project.</p>
+			   <img alt="River Plastics Map" src="images/river_plastics_WORLD_quantiles.jpg" class="activityIMG">
+			   <br>
+		   </div>
+	   </div>
+<!--
+	   <div class="row">
+		   <div class="col-lg-10 offset-lg-1">
+			   <h4>Archived</h4><br>
+			   <p>There are currently no archived challenges.</p>
+		   </div>
+	   </div>
+-->
+       <br/>
+       <br/>
+<!--
+       <div class="row">
+          <div class=" col-md-4"> Click here to select this<strong> column.</strong> Always place your content within a column. Columns are indicated by a dashed blue line. </div>
+          <div class="col-md-4 "> You can <strong>resize a column</strong> using the handle on the right. Drag it to increase or reduce the number of columns.</div>
+          <div class="col-md-4 "> You can <strong>offset a column</strong> using the handle on the left. Drag it to increase or reduce the offset. </div>
+       </div>
+-->
+       <br>
+       <hr>
+       <div class="row">
+          <div class="text-center col-md-8 offset-md-2">
+<!--             <h5>Contact - astrodimitrios(at)gmail.com </h5>-->
+			  <p class="footer-text">Contact - astrodimitrios(at)gmail.com, <br class="brfooter">Copyright&nbsp; Dimitrios Theodorakis &copy; 2021 &middot; GNU GPL 3.0</p>
+          </div>
+       </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>

@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astronomy & Python: Circ Motion Vis</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="favicon.png">
+	  
+	<script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+	<py-env>
+      - matplotlib
+	</py-env>
+  </head>
+  <body>
+    <div class="nav-social-wrapper">
+    <nav class="navbar navbar-expand-md navbar-light astro-navbar">
+       <div id="navlogo-div"><a class="navbar-brand align-items-center align-self-center" href="index.html"><img id="navlogo" src="images/APLogoNAV.svg" alt="Astronomy and Python Logo"></a></div>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item ">
+                <a class="nav-link navlink" href="index.html">Home <span class="sr-only">(current)</span></a>
+             </li>
+			  <li class="nav-item">
+                <a class="nav-link navlink" href="about.html">About</a>
+             </li>
+			  <li class="nav-item dropdown">
+                <a class="nav-link navlink dropdown-toggle navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Get Involved
+                </a>
+                <div class="dropdown-menu astro-drop" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="projects.html">Students</a>
+				   <a class="dropdown-item" href="educators.html">Educators</a>
+				   <a class="dropdown-item" href="challenge.html">Challenges</a>
+                </div>
+             </li>
+			 <li class="nav-item astro-nav-item">
+                <a class="nav-link navlink" href="code.html">Code</a>
+             </li>
+             <li class="nav-item astro-nav-item">
+                <a class="nav-link navlink" href="https://github.com/AstroDimitrios/Astronomy">
+					GitHub <img id="githubLogo" alt="GitHub Logo" src="images/github.svg">
+				</a>
+             </li>
+             <li class="nav-item dropdown astro-nav-item">
+                <a class="nav-link navlink dropdown-toggle navbarDropdown" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+                </a>
+                <div class="dropdown-menu astro-drop" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="ppt.html">Teaching</a>
+				   <a class="dropdown-item" href="data.html">Data</a>
+					<a class="dropdown-item" href="fits.html">FITs Processing</a>
+					<a class="dropdown-item" href="read.html">Reading Lists</a>
+					<a class="dropdown-item" href="edi.html">EDI & Careers</a>
+				   <a class="dropdown-item" href="visual.html">Visuals</a>
+                </div>
+             </li>
+          </ul>
+       </div>
+	  </nav>
+	  <div class="social_square_icons">
+    	     <ul>
+				<li id="ytube-list"><a href="https://www.youtube.com/channel/UCf8Sg-cgLNubyCM5Em8eDZg" class="youtube gap"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+				<li><a href="https://twitter.com/AstroDimitrios" class="t_twitter gap"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+				<li><a href="https://www.linkedin.com/in/dimitrios-theodorakis-62b378171/" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+		     </ul>
+		</div>
+	</div>
+	<div class="jumbotron jumbotron-fluid text-center subpage-title">
+      <h1 class="display-4 innerjumbo with-smalltag">Circular Motion Sim</h1>
+		<p class="smalltag">planet in circular motion</p>
+   </div>
+	<div class="container">
+       <div class="row">
+         <div class="col-md-8 offset-lg-2">
+			  <p>Simulation showing a planet orbiting the Sun. The centripetal force and velocity arrows are drawn. Made using <a href="https://pyscript.net/" class="astroLinks">PyScript</a>.</p>
+	      </div>
+	   </div>
+		<br><br>
+	</div>
+	  <div class="container">
+	   <div class="row">
+		   <div class="col-md-8 offset-lg-2">
+            <div class="row" id="btn-row">
+               <div class="btn-sim-div">
+                  <button id="button-back" type="button" class="btn btn-primary btn-sim" pys-onClick="main_play_back">
+                  &#x23F4;&#xFE0E;
+               </div>
+               <div class="btn-sim-div">
+                  <button id="button-pause" type="button" class="btn btn-primary btn-sim" pys-onClick="main_stop">
+                  &#x23F8;&#xFE0E;
+               </div>
+               <div class="btn-sim-div">
+                  <button id="button-forward" type="button" class="btn btn-primary btn-sim" pys-onClick="main_play">
+                  &#x23F5;&#xFE0E;
+               </div>
+            </div>
+			   <div class="row">
+               <div style="width:15%;">
+			         <p class="center-vis text-center">Angle</p>
+               </div>
+               <div style="width:70%; display: flex; align-items: center;">
+                  <input class="center-slider slider slider-var" id="slider-num-var" type="range" min="0" max="360" value="0" step="1" oninput="document.getElementById('angle').value = this.value" style="width:100%;">
+               </div>
+               <div style="width:15%;">
+                  <output class="center-vis2" style="float: left; padding-right: 0px;" id="angle">0</output>
+                  <p class="center-vis2" style="float: left; padding-left: 0px;">&deg;</p>
+               </div>
+			   </div>
+            <div class="row">
+               <div id="outputDiv" class="col-md-8 offset-lg-2"></div>
+            </div>
+            <div class="row">
+               <div id="outputHelp" class="col-md-8 offset-lg-2"></div>
+            </div>
+            <py-script>
+                import numpy as np
+                import matplotlib.pyplot as plt
+                import mpl_toolkits.axes_grid1
+
+                out = Element("outputDiv")
+                help = Element("outputHelp")
+
+                class Player():
+                    def __init__(self, fig, func, out, forward=True, frames=None, init_func=None, fargs=None,
+                              save_count=None, mini=0, maxi=100, **kwargs):
+                        self.i = 0
+                        self.min=mini
+                        self.max=maxi
+                        self.runs = True
+                        self.forwards = forward
+                        self.fig = fig
+                        self.func = func
+                        self.setup()
+                        <!-- self.play() -->
+
+                        self.func(self.i)
+                        Element("slider-num-var").write(self.i)
+                        out.write(fig)
+
+                    # don't need while can just use onestep to draw next step in iteration
+                    # use player buttons to control i 
+            
+                    <!-- def play(self):
+                        self.i = self.i+self.forwards-(not self.forwards)
+                        if self.i > self.min and self.i < self.max:
+                            yield self.i
+                        else:
+                            if self.i == self.max:
+                                self.i = self.min
+                            else:
+                                self.i = self.max
+                        self.func(self.i)
+                        Element("slider-num-var").write(self.i)
+                        out.write(fig) -->
+            
+                    <!-- def onestep(self):
+                        if self.i > self.min and self.i < self.max:
+                            self.i = self.i+self.forwards-(not self.forwards)
+                        elif self.i == self.min and self.forwards:
+                            self.i+=1
+                        elif self.i == self.max and not self.forwards:
+                            self.i-=1
+                        self.func(self.i)
+                        Element("slider-num-var").write(self.i)
+                        out.write(fig) -->
+            
+                    def setup(self):           
+                        ang = Element("slider-num-var").value
+                        help.write(ang)
+            
+                    # this should take slider value and draw that one
+                    <!-- def set_value(self, i):
+                        self.i = int(Element("slider-num-var").value)
+                        self.func(self.i) -->
+            
+                    <!-- def update(self,i):
+                        Element("slider-num-var").write(self.i) -->
+
+                fig, ax = plt.subplots(1, 1, dpi=150, figsize=(10,10))
+                ax.axis("off")
+                     
+                G = 6.67430*10**-11    # m3 kg-1 s-2
+                AU = 1.496*10**11      # m
+                     
+                m_Sun = 1.989*10**30   # kg
+                m_Earth = 5.972*10**24 # kg
+                     
+                r = 1
+                     
+                def calc_cent_f(m1, m2, r):
+                    m2 *= m_Earth
+                    r *= AU
+                    return G*m1*m2/r**2
+                                          
+                def gen_circle(r):
+                    theta = np.linspace(0, 2*np.pi, 361)
+                    x = r*np.cos(theta) # AU
+                    y = r*np.sin(theta) # AU
+                    return x, y
+                                          
+                x, y = gen_circle(r)
+
+                fig = plt.figure(num=1, figsize=(4, 4))
+                lim = r*1.4
+                ax = plt.axes(xlim=(-lim, lim), ylim=(-lim, lim), projection='3d')
+                ax.axis("off")
+                trace = ax.plot(x, y, 0, linestyle="--")
+                sun = ax.scatter3D(0, 0, 0, s=500, c='gold', zorder=1)
+                circle, = ax.plot(x[0], y[0], 0, linestyle="", marker="o", zorder=2)
+
+                def update(i):
+                    circle.set_data([x[i]], [y[i]])
+                    circle.set_3d_properties([0])   # Update the positions of our balls
+
+                # button controllers
+                from js import setInterval, clearInterval
+                from pyodide import to_js
+  
+                class Play_Buttons():
+                    def __init__(self):
+                        pass
+  
+                    def start(self):
+                        self.tm = setInterval(
+                            to_js(lambda: Player(fig, update, out, maxi=len(y)-1)),
+                            1000  # Update every 1000 ms
+                        )
+  
+                    def stop(self):
+                        clearInterval(self.tm)
+
+                    def back(self):
+                        clearInterval(self.tm)
+                        self.tm = setInterval(
+                            to_js(lambda: Player(fig, update, out, forward=False, maxi=len(y)-1)),
+                            1000  # Update every 1000 ms
+                        )
+  
+                player = Play_Buttons()
+  
+                def main_play(*ags, **kws):
+                    player.start()
+  
+                def main_play_back(*ags, **kws):
+                    player.back()
+  
+                def main_stop(*ags, **kws):
+                    player.stop()
+
+            </py-script>
+			  <br>
+		   </div>
+	   </div>
+       <br/>
+       <br/>
+<!--
+       <div class="row">
+          <div class=" col-md-4"> Click here to select this<strong> column.</strong> Always place your content within a column. Columns are indicated by a dashed blue line. </div>
+          <div class="col-md-4 "> You can <strong>resize a column</strong> using the handle on the right. Drag it to increase or reduce the number of columns.</div>
+          <div class="col-md-4 "> You can <strong>offset a column</strong> using the handle on the left. Drag it to increase or reduce the offset. </div>
+       </div>
+-->
+       <br>
+       <hr>
+       <div class="row">
+          <div class="text-center col-md-8 offset-md-2">
+<!--             <h5>Contact - astrodimitrios(at)gmail.com </h5>-->
+			  <p class="footer-text">Contact - astrodimitrios(at)gmail.com, <br class="brfooter">Copyright&nbsp; Dimitrios Theodorakis &copy; 2021 &middot; GNU GPL 3.0</p>
+          </div>
+       </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>

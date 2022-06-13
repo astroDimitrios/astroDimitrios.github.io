@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Astronomy & Python: FITs</title>
+
+    <!-- Bootstrap -->
+    <link href="css/bootstrap-4.4.1.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link href="css/main.css" rel="stylesheet" type="text/css">
+	<link rel="icon" href="favicon.png">
+  </head>
+  <body>
+    <div class="nav-social-wrapper">
+    <nav class="navbar navbar-expand-md navbar-light astro-navbar">
+       <div id="navlogo-div"><a class="navbar-brand align-items-center align-self-center" href="index.html"><img id="navlogo" src="images/APLogoNAV.svg" alt="Astronomy and Python Logo"></a></div>
+       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+       <span class="navbar-toggler-icon"></span>
+       </button>
+       <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav mr-auto">
+             <li class="nav-item">
+                <a class="nav-link navlink" href="index.html">Home <span class="sr-only">(current)</span></a>
+             </li>
+			  <li class="nav-item">
+                <a class="nav-link navlink" href="about.html">About</a>
+             </li>
+			  <li class="nav-item dropdown">
+                <a class="nav-link navlink dropdown-toggle navbarDropdown" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Get Involved
+                </a>
+                <div class="dropdown-menu astro-drop" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="projects.html">Students</a>
+				   <a class="dropdown-item" href="educators.html">Educators</a>
+				   <a class="dropdown-item" href="challenge.html">Challenges</a>
+                </div>
+             </li>
+			 <li class="nav-item astro-nav-item">
+                <a class="nav-link navlink" href="code.html">Code</a>
+             </li>
+             <li class="nav-item astro-nav-item">
+                <a class="nav-link navlink" href="https://github.com/AstroDimitrios/Astronomy">
+					GitHub <img id="githubLogo" alt="GitHub Logo" src="images/github.svg">
+				</a>
+             </li>
+             <li class="nav-item dropdown astro-nav-item active">
+                <a class="nav-link navlink dropdown-toggle navbarDropdown" href="#"  role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                Resources
+                </a>
+                <div class="dropdown-menu astro-drop" aria-labelledby="navbarDropdown">
+                   <a class="dropdown-item" href="ppt.html">Teaching</a>
+				   <a class="dropdown-item" href="data.html">Data</a>
+				   <a class="dropdown-item active-drop" href="#">FITs Processing</a>
+					<a class="dropdown-item" href="read.html">Reading Lists</a>
+					<a class="dropdown-item" href="edi.html">EDI & Careers</a>
+				   <a class="dropdown-item" href="visual.html">Visuals</a>
+                </div>
+             </li>
+          </ul>
+       </div>
+	  </nav>
+	  <div class="social_square_icons">
+    	     <ul>
+				<li id="ytube-list"><a href="https://www.youtube.com/channel/UCf8Sg-cgLNubyCM5Em8eDZg" class="youtube gap"><i class="fa fa-youtube-play" aria-hidden="true"></i></a></li>
+				<li><a href="https://twitter.com/AstroDimitrios" class="t_twitter gap"><i class="fa fa-twitter" aria-hidden="true"></i></a> </li>
+				<li><a href="https://www.linkedin.com/in/dimitrios-theodorakis-62b378171/" class="linkedin"><i class="fa fa-linkedin" aria-hidden="true"></i></a> </li>
+		     </ul>
+		  </div>
+	  </div>
+	<div class="jumbotron jumbotron-fluid text-center subpage-title">
+       <h1 class="display-4 innerjumbo">FITs Image Processing</h1>
+    </div>
+	<div class="container-fluid">
+       <div class="row text-center">
+          <div class="col-md-8 offset-md-2">
+			  <p>Resources to help process images and selected FITS image files from various telescopes. Buttons on each card link to GitHub, click on the images to download the powerpoint or file.</p>
+			  <br>
+			  <p>Skip to <a href="#FITS_Header" class="astroLinks">FITS image files</a>.</p>
+	      </div>
+	   </div>
+		<br>
+	</div>
+    <div class="container-fluid">
+       <div class="row">
+		   <div class="col-md-8 offset-lg-2">
+			  <h4 class="special-center-text" id="PROCESS_Header">Image Processing</h4><br>
+			   <p class="special-center-text">PPTs on image processing with various astronomical software. I prefer to use JS9-4L or just JS9 since these run in the browser requiring no install.</p>
+			   <p><strong>Other Software:</strong>
+			   	<ul>
+			   		<li>The National Schools Observatory, <a href="https://www.schoolsobservatory.org/" class="astroLinks">NSO</a>, maintains a piece of software called LTImage which can be downloaded from their website <a href="https://www.schoolsobservatory.org/obs/software/ltimage" class="astroLinks">here</a> with good instruction sheets for students, example files, and a teacher lesson/PPT <a href="https://www.schoolsobservatory.org/teach/activities/3_colour_imaging" class="astroLinks">here</a> as part of their making an RGB image activity.</li>
+					<li>The Las Cumbres Observatory, <a href="https://lco.global/" class="astroLinks">LCO</a>, has instructions on using FITS Liberator and Photoshop <a href="https://lco.global/education/activities/how-make-color-astronomical-images-photoshop/" class="astroLinks">here</a> and FITS Liberator and GIMP <a href="https://lco.global/education/activities/how-to-create-stunning-colour-images-of-the-cosmos/" class="astroLinks">here</a>. In both cases the FITS Liberator software is used to convert the FITS files to TIFFS since Photoshop and GIMP can't read FITS files natively. Both of these examples contain videos, text instructions, and data files to download.</li>
+			   </ul>
+			   </p>
+			  <br><br>
+		   </div>
+       </div>
+	  </div>
+	  <div class="container-fluid">
+		  <div class="row">
+			  <div class="col-md-4">
+			  	<div class="card">
+				  <a href="https://drive.google.com/drive/folders/1F7-gH_xgA0dNb9kxOHhGcPaNZAi4XPbb?usp=sharing"><img class="card-img-top" src="images/SAOImageDS9.png" alt="SAOImageDS9"></a>
+				  <div class="card-body">
+					<h5 class="card-title special-center-text">SAOImageDS9</h5>
+					<p class="card-text">Requires Install - great tool for viewing and analysing FITS. Excellent graphical interface.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+			  	<div class="card">
+				  <a href="https://drive.google.com/drive/folders/1F7-gH_xgA0dNb9kxOHhGcPaNZAi4XPbb?usp=sharing"><img class="card-img-top" src="images/JS9.png" alt="JS9"></a>
+				  <div class="card-body">
+					<h5 class="card-title special-center-text">JS9</h5>
+					<p class="card-text">Runs in browser. Easy to use. Alignment of RGB images can be an issue.</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-4">
+			  	<div class="card">
+				  <a href="https://drive.google.com/drive/folders/1F7-gH_xgA0dNb9kxOHhGcPaNZAi4XPbb?usp=sharing"><img class="card-img-top" src="images/JS9-4L.jpg" alt="JS9-4L"></a>
+				  <div class="card-body">
+					<h5 class="card-title special-center-text">JS9-4L</h5>
+					<p class="card-text">Run in browser. The NASA MicroObservatory version of JS9. Even easier to use than JS9 and includes some handy image tools and tutorials.</p>
+				  </div>
+				</div>
+			  </div>
+		  </div><br>
+		  <div class="row">
+			  <div class="col-md-4 offset-md-2">
+			  	<div class="card">
+				  <a href="https://drive.google.com/drive/folders/1F7-gH_xgA0dNb9kxOHhGcPaNZAi4XPbb?usp=sharing"><img class="card-img-top" src="images/AstroImageJ.png" alt="AstroImageJ"></a>
+				  <div class="card-body">
+					<h5 class="card-title special-center-text">AstroImageJ</h5>
+					<p class="card-text">The Astronomy version of ImageJ. Can be confusing without guidance. Does not require an install, download the files and run the executable.</p>
+				  </div>
+				</div>
+			  </div>
+		  <div class="col-md-4">
+			  	<div class="card">
+				  <a href="https://drive.google.com/drive/folders/1F7-gH_xgA0dNb9kxOHhGcPaNZAi4XPbb?usp=sharing"><img class="card-img-top" src="images/APT.png" alt="APT"></a>
+				  <div class="card-body">
+					<h5 class="card-title special-center-text">Photometry with APT</h5>
+					<p class="card-text">Requires Install - Aperture Photometry Tool. A very easy to use piece of software.</p>
+				  </div>
+				</div>
+			  </div><br><br>
+	    </div>
+	</div>
+	  <div class="container-fluid">
+       <div class="row">
+		   <div class="col-md-8 offset-lg-2"><br>
+			  <h4 class="special-center-text" id="FITS_Header">FITS image files</h4><br>
+			   <p class="special-center-text">Here are some FITS files that students and I have taken using Faulkes/LCO telescopes. They are stored on Google Drive. Clicking on the image will take you to the shared folder.</p>
+			  <br>
+			   <p><strong>Other FITS Sources:</strong>
+			   	<ul>
+			   		<li>The National Schools Observatory activites which were linked above have FITS files for different objects to download.</li>
+					<li>Again the Las Cumbres Observatory has images to download in the activities linked above as well as their Hubble Tuning Fork activity <a href="https://lco.global/education/activities/create-a-hubble-tuning-fork-diagram/" class="astroLinks">here</a> (students use the files to make their own Hubble Tuning Fork). You can also search the entire LCO archives which are located <a href="https://archive.lco.global/" class="astroLinks">here</a> for images (LCO activity on searching the archive <a href="https://lco.global/education/activities/how-to-find-images-using-the-lco-science-archive/" class="astroLinks">here</a>).</li>
+			   </ul>
+			   </p><br>
+		   </div>
+       </div>
+	  </div>
+	  
+		  <div class="row">
+			  <div class="col-md-3 offset-md-3">
+			  	<div class="card">
+				  <a href="https://drive.google.com/drive/folders/1CyundfX8P-BfxZrxfrYCA5VBvhP13fMv?usp=sharing"><img class="card-img-top" src="images/Aligned_lcogtdata-20211113-8crop.gif" alt="Comet GIF"></a>
+				  <div class="card-body">
+					<h5 class="card-title special-center-text">COMET P/2021 U3 (Attard-Maury)</h5>
+					<p class="card-text">8 time series images taken on the LCO 2-metre telescope of Comet P/2021 U3</p>
+				  </div>
+				</div>
+			  </div>
+			  <div class="col-md-3">
+			  	<div class="card">
+				  <a href="https://drive.google.com/drive/folders/1CyundfX8P-BfxZrxfrYCA5VBvhP13fMv?usp=sharing"><img class="card-img-top" src="images/NGC2207-rush.jpg" alt="NGC2207"></a>
+				  <div class="card-body">
+					<h5 class="card-title special-center-text">Interacting Galaxies</h5>
+					<p class="card-text">RGB FITS files for some interacting galaxies in different stages of merging. Contains M51, NGC1316, NGC1487, NGC2207, NGC4038, and NGC6050. More on their way!</p>
+				  </div>
+				</div>
+			  </div>
+		  </div><br>
+	  <div class="container">
+       <br>
+       <hr>
+       <div class="row">
+          <div class="text-center col-md-8 offset-md-2">
+<!--             <h5>Contact - astrodimitrios(at)gmail.com </h5>-->
+			  <p class="footer-text">Contact - astrodimitrios(at)gmail.com, <br class="brfooter">Copyright&nbsp; Dimitrios Theodorakis &copy; 2021 &middot; GNU GPL 3.0</p>
+          </div>
+       </div>
+    </div>
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) --> 
+    <script src="js/jquery-3.4.1.min.js"></script>
+
+    <!-- Include all compiled plugins (below), or include individual files as needed --> 
+    <script src="js/popper.min.js"></script>
+    <script src="js/bootstrap-4.4.1.js"></script>
+  </body>
+</html>
