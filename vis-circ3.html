@@ -104,7 +104,7 @@
                   &#x23F5;&#xFE0E;
                </div>
             </div>
-			   <div class="row">
+			<div class="row">
                <div style="width:15%;">
 			         <p class="center-vis text-center">Angle</p>
                </div>
@@ -115,10 +115,14 @@
                   <output class="center-vis2" style="float: left; padding-right: 0px;" id="angle">0</output>
                   <p class="center-vis2" style="float: left; padding-left: 0px;">&deg;</p>
                </div>
-			   </div>
-            <div class="row">
-               <div id="outputDiv" class="col-md-8 offset-lg-2"></div>
+			</div>
+            </div> 
             </div>
+            </div>
+      <div class="container-flex">
+        <div class="row-flex">      
+            <!-- finish col containing buttons etc -->
+            <div id="outputDiv" class="col-md-10 offset-md-1"></div>
             <div class="row">
                <div id="outputHelp" class="col-md-8 offset-lg-2"></div>
             </div>
@@ -129,6 +133,8 @@
 
                 out = Element("outputDiv")
                 help = Element("outputHelp")
+                slider = Element("slider-num-var")
+                slider_value_out = Element("angle")
 
                 class Player():
                     def __init__(self, i, fig, func, out, forward=True):
@@ -142,7 +148,7 @@
                         <!-- self.setup() -->
 
                         self.func(self.i)
-                        Element("slider-num-var").write(self.i)
+                        slider_value_out.write(self.i*180/np.pi)
                         out.write(fig)
 
                     # don't need while can just use onestep to draw next step in iteration
@@ -162,6 +168,8 @@
 
                 fig, ax = plt.subplots(1, 1, dpi=150, figsize=(10,10))
                 ax.axis("off")
+                ax.get_xaxis().set_visible(False) # this removes the ticks and numbers for x axis
+                ax.get_yaxis().set_visible(False) # this removes the ticks and numbers for y axis
                      
                 G = 6.67430*10**-11    # m3 kg-1 s-2
                 AU = 1.496*10**11      # m
@@ -177,12 +185,12 @@
                     return G*m1*m2/r**2
                                           
                 def gen_circle(r):
-                    theta = np.linspace(0, 2*np.pi, 361)
+                    theta = np.linspace(0, 2*np.pi, 181)
                     x = r*np.cos(theta) # AU
                     y = r*np.sin(theta) # AU
-                    return x, y
+                    return x, y, theta
                                           
-                x, y = gen_circle(r)
+                x, y, theta = gen_circle(r)
 
                 fig = plt.figure(num=1, figsize=(4, 4))
                 lim = r*1.4
@@ -196,27 +204,63 @@
                     circle.set_data([x[i]], [y[i]])
                     circle.set_3d_properties([0])   # Update the positions of our balls
 
+                # initial draw
+                out.write(fig)            
+
                 # button controllers
+                import js
                 from js import setInterval, clearInterval
                 from pyodide import to_js
   
                 class Play_Buttons():
-                    def __init__(self, update, mini=0, maxi=100):
+                    def __init__(self, func, mini=0, maxi=100):
+                        self.func = func
                         self.i = 0
                         self.min = mini
                         self.max = maxi
-
+                    
+                    # need to deal with slider being changed separately
                     def play(self, forward):
+                        <!-- help.write(slider.value) -->
+                        if int(slider.value)%2 != 0:
+                            <!-- help.write("oops") -->
+                            new_slider_value = int(slider.value)-1
+                            new_slider_value_ang = new_slider_value*np.pi/180
+                        else:
+                            new_slider_value_ang = int(slider.value)*np.pi/180
+                        slider_i = np.where(theta == new_slider_value_ang)[0][0]
+                        help.write("oops")
+                        print(self.i)
+                        print(forward)
                         next_i = self.i + forward - (not forward)
+                        help.write("oops2")
+                        if slider_i != next_i:
+                            help.write("oops3")
+                            next_i = slider_i
+                            help.write("oops4")
                         if next_i == self.min and not forward:
                             self.i = self.max
-                        if next_i == self.max and forward:
+                        elif next_i == self.max and forward:
                             self.i = self.min
+                        else:
+                            self.i = next_i
+                        help.write("oops5")
+                        
+                        self.func(self.i)
+                        s = js.document.getElementById("slider-num-var")
+                        help.write(f"oops5 {self.i}")
+                        s.value = int(self.i*180/np.pi)
+                        <!-- self.assign_slider(slider, int(self.i*180/np.pi)) -->
+                        slider_value_out.write(f"{self.i*180/np.pi:.0f}")
+                        out.write(fig)
   
-                    def start(self, i):
+                    <!-- def assign_slider(self, slider, val):
+                        to_js(slider.value = val) -->
+
+                    def start(self):
                         self.tm = setInterval(
-                            to_js(lambda: Player(i, fig, update, out, maxi=len(y)-1)),
-                            1000  # Update every 1000 ms
+                            to_js(lambda: self.play(True)),
+                            50  # Update every 1000 ms
                         )
   
                     def stop(self):
@@ -225,8 +269,8 @@
                     def back(self):
                         clearInterval(self.tm)
                         self.tm = setInterval(
-                            to_js(lambda: Player(i, fig, update, out, forward=False, maxi=len(y)-1)),
-                            1000  # Update every 1000 ms
+                            to_js(lambda: self.play(False)),
+                            50  # Update every 1000 ms
                         )
   
                 player = Play_Buttons(update, 0, len(x))
